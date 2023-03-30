@@ -1,0 +1,58 @@
+{
+  "name": "webft8-desktop",
+  "productName": "webft8-desktop",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/electron_index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --mac --win --linux",
+    "dist_linux": "electron-builder --linux --x64",
+    "dist_windows": "electron-builder --win --x64",
+    "dist_mac": "electron-builder --mac",
+    "dist_mac_intel": "electron-builder --mac --x64"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Rafal Rozestwinski",
+    "email": "rafal@rozestwinski.com"
+  },
+  "license": "AGPLv3",
+  "dependencies": {
+    "electron-serve": "^1.1.0",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.1.0",
+    "@electron-forge/maker-deb": "^6.1.0",
+    "@electron-forge/maker-rpm": "^6.1.0",
+    "@electron-forge/maker-squirrel": "^6.1.0",
+    "@electron-forge/maker-zip": "^6.1.0",
+    "electron": "23.2.0",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.rozestwinski.webft8",
+    "productName": "webft8",
+    "mac": {
+      "icon": "icon512.png"
+    },
+    "dmg": {},
+    "mas": {},
+    "win": {
+      "icon": "icon512.png",
+      "publisherName": "Rafal Rozestwinski"
+    },
+    "appx": {},
+    "portable": {},
+    "linux": {
+      "category": "Science",
+      "target": "tar.gz"
+    }
+  }
+}
